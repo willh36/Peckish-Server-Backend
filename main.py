@@ -11,7 +11,7 @@ def index():
 def api():
     latitude = request.args.get("latitude")
     longitude = request.args.get("longitude")
-    return searchNearbyPlaces(latitude, longitude)
+    return f"Latitude: {latitude}, Longitude: {longitude}"
 
 if __name__ == '__main__':
     app.run()
