@@ -2,3 +2,4 @@ Secrets/peckish-server-side-fbbb7c168077.json
 .venv/
 client-secret.json
 token files/token_places_v1.json
+.env

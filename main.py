@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request
-from googleMaps.mapsNearbyPlaces import searchNearbyPlaces
+from googleAPIs.nearbyPlaces import searchNearbyPlaces
 
 app = Flask(__name__)
 
@@ -11,7 +11,7 @@ def index():
 def api():
     latitude = request.args.get("latitude")
     longitude = request.args.get("longitude")
-    return f"Latitude: {latitude}, Longitude: {longitude}"
+    return searchNearbyPlaces(latitude, longitude)
 
 if __name__ == '__main__':
     app.run()

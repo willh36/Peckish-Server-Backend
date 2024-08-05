@@ -1,8 +1,11 @@
 import os
+from dotenv import load_dotenv
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build 
 from google.oauth2.credentials import Credentials
 from google.auth.transport.requests import Request
+
+load_dotenv()
 
 def searchNearbyPlaces(latitude, longitude):      
     ###### ---------------- CREATE SERVICE ---------------- ######
@@ -66,5 +69,3 @@ def searchNearbyPlaces(latitude, longitude):
     ).execute()
 
     return response
-
-#print(response) # output the response
