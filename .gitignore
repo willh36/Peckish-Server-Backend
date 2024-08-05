@@ -3,3 +3,6 @@ Secrets/peckish-server-side-fbbb7c168077.json
 client-secret.json
 token files/token_places_v1.json
 .env
+googleAPIs/peckish-server-side-6e272434ffd0.json
+googleAPIs/serviceAccount.json
+googleCredentials.json
