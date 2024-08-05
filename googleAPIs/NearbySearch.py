@@ -4,8 +4,6 @@ from dotenv import load_dotenv
 from google.oauth2 import service_account
 from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
-from GoogleAPIs.ServiceSetup import createService
-
 
 def searchNearbyPlaces(service, latitude, longitude):
     request_body = {  # make request body (what you want to search for)
