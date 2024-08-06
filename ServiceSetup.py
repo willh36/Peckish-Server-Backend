@@ -6,9 +6,6 @@ from googleapiclient.discovery import build
 
 load_dotenv()
 
-privateKey = os.getenv('PRIVATE_KEY').replace('|', '\n')
-print("Imported private key: ", privateKey)
-
 googleApplicationCredentialsDictionary = {
   "type": "service_account",
   "project_id": os.getenv('GCP_PROJECT_ID'),
