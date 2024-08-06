@@ -6,6 +6,8 @@ from googleapiclient.discovery import build
 
 load_dotenv()
 
+"""
+
 googleApplicationCredentialsDictionary = {
   "type": "service_account",
   "project_id": os.getenv('GCP_PROJECT_ID'),
@@ -26,6 +28,9 @@ fileName = 'googleCredentials.json'
 with open(fileName, 'w') as file:
     json.dump(googleApplicationCredentialsDictionary, file, indent=4)
 
+"""
+
+fileName = 'googleCredentials.json'
 
 def createService():
     # Load credentials from the service account key JSON file

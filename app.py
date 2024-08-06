@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, request
-from GoogleAPIs.NearbySearch import searchNearbyPlaces
-from GoogleAPIs.ServiceSetup import createService
+from NearbySearch import searchNearbyPlaces
+from ServiceSetup import createService
 
 service = createService()
 
