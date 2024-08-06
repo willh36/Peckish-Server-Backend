@@ -6,13 +6,14 @@ from googleapiclient.discovery import build
 
 load_dotenv()
 
-"""
+privateKey = os.getenv('PRIVATE_KEY').replace('|', '\n')
+print("Imported private key: ", privateKey)
 
 googleApplicationCredentialsDictionary = {
   "type": "service_account",
   "project_id": os.getenv('GCP_PROJECT_ID'),
   "private_key_id": os.getenv('PRIVATE_KEY_ID'),
-  "private_key": os.getenv('PRIVATE_KEY'),
+  "private_key": os.getenv('PRIVATE_KEY').replace('|', '\n'),
   "client_email": os.getenv('GCP_SERVICE_ACCOUNT_EMAIL'),
   "client_id": os.getenv('CLIENT_ID'),
   "auth_uri": "https://accounts.google.com/o/oauth2/auth",
@@ -28,9 +29,6 @@ fileName = 'googleCredentials.json'
 with open(fileName, 'w') as file:
     json.dump(googleApplicationCredentialsDictionary, file, indent=4)
 
-"""
-
-fileName = 'googleCredentials.json'
 
 def createService():
     # Load credentials from the service account key JSON file
